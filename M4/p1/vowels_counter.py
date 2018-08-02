@@ -7,10 +7,10 @@ For example, if s = 'azcbobobegghakl', your program should print:
 Number of vowels: 5"""
 
 def main():
-  """defining a new function main"""
+    """defining a new function main"""
     s_str = input()
     c_co = 0
-  for char in s_str:
+    for char in s_str:
         if char in "AEIOUaeiou":
             c_co += 1
     print(str(c_co))
