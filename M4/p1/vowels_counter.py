@@ -1,17 +1,18 @@
-#Assume s is a string of lower case characters.
+"""Assume s is a string of lower case characters.
 
-#Write a program that counts up the number of vowels contained in the string s. Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. For example, if s = 'azcbobobegghakl', your program should print:
+Write a program that counts up the number of vowels contained in the string s.
+Valid vowels are: 'a', 'e', 'i', 'o', and 'u'.
+For example, if s = 'azcbobobegghakl', your program should print:
 
-#Number of vowels: 5
+Number of vowels: 5"""
 
 def main():
-	 """ definingvowels """
-    var_s = "azcbobobegghakl"
-    count = 0
-    for char in var_s:
-        if char in 'AEIOUaeiou':
-            count = count+1
-    print(count)
-
-if __name__== "__main__":
-	main()
+  """defining a new function main"""
+    s_str = input("Enter the string: ")
+    c_co = 0
+  for char in s_str:
+        if char in "AEIOUaeiou":
+            c_co += 1
+    print("Number of vowels are: "+str(c_co))
+if __name__ == "__main__":
+    main()
