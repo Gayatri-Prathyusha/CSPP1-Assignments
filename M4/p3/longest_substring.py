@@ -18,7 +18,6 @@ cleared your head.'''
 
 def main():
     """defining main function"""
-    str_s = raw_input()
     m_c = 0
     g_c = 0
     c_co = 0
