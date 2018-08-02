@@ -4,7 +4,7 @@ number of times bob occurs is: 2'''
 def main():
     """definition"""
     count_v = 0
-    s_v = raw_input()
+    s_v = input()
     s_v2 = 'bob'
     for i in range(len(s_v)):
         if s_v2 == s_v[i:i+3]:
