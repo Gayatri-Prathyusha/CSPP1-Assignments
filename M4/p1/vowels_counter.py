@@ -8,11 +8,11 @@ Number of vowels: 5"""
 
 def main():
   """defining a new function main"""
-    s_str = input("Enter the string: ")
+    s_str = input()
     c_co = 0
   for char in s_str:
         if char in "AEIOUaeiou":
             c_co += 1
-    print("Number of vowels are: "+str(c_co))
+    print(str(c_co))
 if __name__ == "__main__":
     main()
