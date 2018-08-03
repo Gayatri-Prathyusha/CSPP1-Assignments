@@ -17,6 +17,6 @@ def main():
     if guess**3 == x_val:
         print(x_val,"is a perfect cube")
     else:
-        print(x_val, "is not a perfect cube")
+        print(x_val,"is not a perfect cube")
 if __name__ == "__main__":
     main()
