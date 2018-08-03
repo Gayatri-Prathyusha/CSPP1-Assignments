@@ -19,7 +19,7 @@ cleared your head.'''
 def main():
     """defining main function"""
     str_s = input()
-    m_c = 0
+    m_qc = 0
     g_c = 0
     c_co = 0
     for i in range(len(str_s)-1):
