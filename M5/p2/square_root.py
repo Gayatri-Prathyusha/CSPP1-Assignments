@@ -21,7 +21,7 @@ def main():
     if abs(guess**2 - square) >= epsilon:
         print('Failed')
     else:
-        print(guess, 'is close to the square root of', square)
+        print(guess)
 
 if __name__ == "__main__":
    main()
