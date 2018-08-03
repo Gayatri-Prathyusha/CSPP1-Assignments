@@ -17,7 +17,7 @@ def main():
     while abs(guess**2 - square) >= epsilon:
         guess += i
         num_of_guess += 1
-    if abs(guess**2 - square) >= epsilon:
+    if abs(guess**2 - square) > epsilon:
         print('Failed')
     else:
         print(guess)
