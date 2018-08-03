@@ -10,21 +10,21 @@ output: 6.999999999999991"""
 
 def main():
     """Defining main"""
-    s_s = int(input())
+    square_s = int(input())
     eps_ilon = 0.01
-    l_o = 0
-    h_i = s_s
-    gu_es = (l_o+h_i)/2
-    while abs(gu_es**2-s_s) >= eps_ilon:
-        if gu_es**2 > s_s:
-            h_i = gu_es
+    low_i = 0
+    high_i = square_s
+    guess_es = (low_i+high_i)/2
+    while abs(guess_es**2-square_s) >= eps_ilon:
+        if guess_es**2 > square_s:
+            high_i = guess_es
         else:
-            l_o = gu_es
-        gu_es = (l_o+h_i)/2
-    if (gu_es**2-s_s) >= eps_ilon:
+            low_i = guess_es
+        guess_es = (low_i+high_i)/2
+    if (guess_es**2-square_s) >= eps_ilon:
         print("Failed")
     else:
-        print(gu_es)
+        print(guess_es)
 
 if __name__== "__main__":
 	 main()
