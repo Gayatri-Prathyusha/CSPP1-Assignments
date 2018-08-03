@@ -12,7 +12,7 @@ def main():
     square = int(input())
     epsilon = 0.01
     guess = 0.0
-    i = 0.0001
+    i = 0.1
     num_of_guess = 0
     while abs(guess**2 - square) >= epsilon:
         guess += i
