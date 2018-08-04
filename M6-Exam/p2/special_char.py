@@ -13,9 +13,7 @@ def main():
         if char in "!@#$%^&*":
             z_st += " "
         else:
-            z_st += char     
-            
+            z_st += char              
     print(z_st)
-
 if __name__ == "__main__":
     main()
