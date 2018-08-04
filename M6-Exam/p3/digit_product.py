@@ -17,7 +17,7 @@ def main():
         while g_num != 0:
             rem_num = g_num % 10
             pro_num = pro_num * rem_num
-            g_num = round(g_num / 10)
+            g_num = int(g_num / 10)
         print(pro_num)
 
 if __name__ == "__main__":
