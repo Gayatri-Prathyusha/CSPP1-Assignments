@@ -7,7 +7,13 @@ def main():
     '''
     Read string from the input, store it in variable str_input.
     '''
-    str_input = input()
+    s_st = input()
+    i = 0
+    for char in s_st:
+        if char in "!@#$%^&*":
+            s_st[i] = " b"      
+
+        print(s_st[::])
 
 if __name__ == "__main__":
     main()
