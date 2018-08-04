@@ -8,7 +8,7 @@ def main():
     """
     Read any number from the input, store it in variable int_input.
     """
-    g_num = int(input())
+    g_num = abs(int(input()))
     rem_num = 0
     pro_num = 1
     if g_num == 0:
