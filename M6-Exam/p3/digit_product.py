@@ -20,7 +20,7 @@ def main():
             pro_num = pro_num * rem_num
             g_num = g_num // 10
 
-        print("-"pro_num)
+        print("-",pro_num)
     else:
         while g_num != 0:
             rem_num = g_num % 10
