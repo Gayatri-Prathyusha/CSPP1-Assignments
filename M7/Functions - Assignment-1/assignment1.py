@@ -1,6 +1,6 @@
 """Functions | Assignment-1 - Paying Debt off in a Year
 
-# Write a program to calculate the credit card balance after one year 
+# Write a program to calculate the credit card balance after one year
 if a person only pays the minimum monthly payment required by the
 # credit card company each month.
 
@@ -9,7 +9,7 @@ if a person only pays the minimum monthly payment required by the
 # annualInterestRate - annual interest rate as a decimal
 # monthlyPaymentRate - minimum monthly payment rate as a decimal
 
-# For each month, calculate statements on the monthly payment and remaining 
+# For each month, calculate statements on the monthly payment and remaining
 balance. At the end of 12 months, print out the remaining
 # balance. Be sure to print out no more than two decimal digits of accuracy
  - so print
@@ -18,7 +18,7 @@ balance. At the end of 12 months, print out the remaining
 # instead of
 # Remaining balance: 813.4141998135
 
-# So your program only prints out one thing: the remaining balance 
+# So your program only prints out one thing: the remaining balance
 at the end of the year in the format:
 # Remaining balance: 4784.0
 
@@ -29,14 +29,13 @@ at the end of the year in the format:
 # Updated balance each month = (Monthly unpaid balance) +
  (Monthly interest rate x Monthly unpaid balance)"""
 
-def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):  
+def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
     """Function definition to calculation of the data"""
     for i in range(12):
         """ To get the balance"""
         balance = balance - (balance * monthlyPaymentRate
-            ) + ((balance - (balance * monthlyPaymentRate)) * (annualInterestRate / 12))
-       # print ( "Remaining balance monthly ",round(balance, 2))
-    
+        ) + ((balance - (balance * monthlyPaymentRate)) * (annualInterestRate / 12))
+       # print ( "Remaining balance monthly ",round(balance, 2)) 
     return (round(balance, 2))
 def main():
     data = input()
