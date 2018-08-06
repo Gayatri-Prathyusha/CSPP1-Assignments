@@ -35,7 +35,7 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
         """ To get the balance"""
         balance = balance - (balance * monthlyPaymentRate
             ) + ((balance - (balance * monthlyPaymentRate)) * (annualInterestRate / 12))
-        print ( "Remaining balance monthly ",round(balance, 2))
+       # print ( "Remaining balance monthly ",round(balance, 2))
     print("Remaining balance:", round(balance, 2))
     return round(balance,2)
 def main():
