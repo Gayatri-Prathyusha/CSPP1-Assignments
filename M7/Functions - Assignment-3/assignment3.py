@@ -32,7 +32,7 @@ such that we can pay off the entire balance within a year. What
 
 # What is a good upper bound? Imagine that instead of paying monthly,
  we paid off the entire balance at the end of the year. What we
-# ultimately pay must be greater than what we would've paid in monthly 
+# ultimately pay must be greater than what we would've paid in monthly
 installments, because the interest was compounded on the balance
 # we didn't pay off each month. So a good upper bound for the monthly
  payment would be one-twelfth of the balance, after having its
@@ -43,24 +43,24 @@ installments, because the interest was compounded on the balance
 # Monthly payment lower bound = Balance / 12
 # Monthly payment upper bound = (Balance x (1 + Monthly interest rate)12) / 12.0
 
-# Write a program that uses these bounds and bisection search (for 
+# Write a program that uses these bounds and bisection search (for
 more info check out the Wikipedia page on bisection search) to find
-# the smallest monthly payment to the cent (no more multiples of $10) 
+# the smallest monthly payment to the cent (no more multiples of $10)
 such that we can pay off the debt within a year. Try it out with
-# large inputs, and notice how fast it is (try the same large inputs 
+# large inputs, and notice how fast it is (try the same large inputs
 in your solution to Problem 2 to compare!). Produce the same return
 # value as you did in Assignment 2."""
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
+def paying_debt_offinayear(balance, annualInterestRate):
     min_month_payment = 0
     monthly_unpaid_balance = 0
     monthly_interest_rate =  annualInterestRate / 12.0
     low_bal = balance / 12.0
     high_bal = (balance * (1 + monthly_interest_rate) ** 12 ) / 12.0
     min_month_payment = (low_bal + high_bal) / 2.0
-    while(True):
+    while (True):
         rem_balance = balance
         for i in range(0,12):
             monthly_unpaid_balance = rem_balance - min_month_payment
@@ -74,15 +74,13 @@ def payingDebtOffInAYear(balance, annualInterestRate):
             else:
                 high_bal = min_month_payment
         min_month_payment = (low_bal + high_bal) / 2.0
-
-    return round(min_month_payment, 2)
-
+    return round(min_month_payment, 2) 
 def main():
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment: " +str(payingDebtOffInAYear(data[0], data[1])))
+    print("Lowest Payment: " +str(paying_debt_offinayear(data[0], data[1])))
     
 if __name__== "__main__":
     main()
