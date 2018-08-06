@@ -37,8 +37,7 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
             ) + ((balance - (balance * monthlyPaymentRate)) * (annualInterestRate / 12))
        # print ( "Remaining balance monthly ",round(balance, 2))
     print("Remaining balance:", round(balance, 2))
-    return (round (balance, 2))
-def main():
+    def main():
     """ Data code to  be given """
     data = input()
     data = data.split(' ')
