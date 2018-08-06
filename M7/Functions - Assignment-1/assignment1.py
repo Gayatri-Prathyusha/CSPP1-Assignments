@@ -30,6 +30,7 @@ at the end of the year in the format:
  (Monthly interest rate x Monthly unpaid bal_ance)"""
 def paying_debtoff_inayear(bal_ance, annual_interestrate, monthly_paymentrate):
     """Function definition to calculation of the data"""
+    i = 1
     for i in range(12):
         bal_ance = bal_ance - (bal_ance * monthly_paymentrate) + (
             (bal_ance - (bal_ance * monthly_paymentrate)) * (annual_interestrate / 12))
