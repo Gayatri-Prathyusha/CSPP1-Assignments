@@ -39,7 +39,6 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
     
     return (round(balance, 2))
     def main():
-    """ Data code to  be given """
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
