@@ -69,7 +69,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
         else:
             return guess
 
-        guess = (monthly_payment_lower_bound + monthly_payment_upper_bound)/2
+        guess = (monthly_payment_lower_bound + monthly_payment_upper_bound) / 2
 def main():
     """ it is a main function"""
     data = input()
