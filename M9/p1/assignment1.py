@@ -7,15 +7,9 @@ secret_word are in letters_guessed) and False otherwise.
 '''
 """
 
-def is_word_guessed(secret_word, letters_guessed):
-    '''
-    secret_word: string, the word the user is guessing
-    letters_guessed: list, what letters have been guessed so far
-    returns: boolean, True if all the letters of secret_word are in letters_guessed;
-      False otherwise
-    '''
-    # FILL IN YOUR CODE HERE...
 """guess"""
+def is_word_guessed(secret_word, letters_guessed):
+    """guess"""
     list_1 = list(secret_word)
     length_1 = len(secret_word)
     count = 0
