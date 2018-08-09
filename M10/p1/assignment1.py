@@ -17,7 +17,6 @@ def get_available_letters(letters_guessed):
         if char in letters_guessed:
             alphabets = alphabets.replace(char, "")
     return alphabets
-   
 def main():
     '''
     Main function for the given program
@@ -29,6 +28,5 @@ def main():
         data.append(char[0])
     print(get_available_letters(data))
 
-
 if __name__ == "__main__":
-   main()
+    main()
