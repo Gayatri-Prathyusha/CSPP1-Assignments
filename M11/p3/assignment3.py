@@ -20,6 +20,14 @@ passed the appropriate tests in test_ps4a.py before pasting your
 function definition here.
 '''
 def is_valid_word(word, hand, word_list):
+    """
+    Returns True if word is in the word_list and is entirely
+    composed of letters in the hand. Otherwise, returns False.
+    Does not mutate hand or word_list.
+    word: string
+    hand: dictionary (string -> int)
+    word_list: list of lowercase strings"""
+    # TO DO ... <-- Remove this comment when you code this function
     if word not in word_list:
         return False
     else:
@@ -27,19 +35,8 @@ def is_valid_word(word, hand, word_list):
             if _ not in hand.keys():
                 return False
     return True
-    """
-    Returns True if word is in the word_list and is entirely
-    composed of letters in the hand. Otherwise, returns False.
-
-    Does not mutate hand or word_list.
-   
-    word: string
-    hand: dictionary (string -> int)
-    word_list: list of lowercase strings
-    """
-    # TO DO ... <-- Remove this comment when you code this function
 def main():
-    """string"""
+    """Main function"""
     word = input()
     n_num = int(input())
     a_dict = {}
