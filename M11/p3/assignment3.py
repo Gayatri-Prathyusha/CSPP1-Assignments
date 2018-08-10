@@ -38,8 +38,7 @@ def is_valid_word(word, hand, word_list):
         for _ in hand:
             if _ in word:
                 c = c+1
-    print(c)
-    if c == l:
+        if c == l:
         
         return True
     return False
