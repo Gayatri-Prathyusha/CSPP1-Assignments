@@ -20,10 +20,10 @@ def update_hand(hand, word):
     hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
-    a_list = {}
+    a_list = hand
     for j in word:
-        if j in hand:
-            a_list[j] = hand[j]-1
+        if j in a_list:
+            a_list[j] = a_list[j] - 1
     return a_list
 
 def main():
