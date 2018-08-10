@@ -43,7 +43,7 @@ def main():
     word = input()
     n_num = int(input())
     a_dict = {}
-    for _ in range(n_num):
+    for i in range(n_num):
         data = input()
         i = i + 1
         i = i - 1
