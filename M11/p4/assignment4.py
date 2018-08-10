@@ -15,7 +15,7 @@ def calculate_handlen(hand):
     """
     sum_o = 0
     for letters in hand:
-        sum_o= sum_o + hand[letters]
+        sum_o = sum_o + hand[letters]
     return sum_o
 
 def main():
@@ -27,6 +27,5 @@ def main():
         l_ist = data.split()
         a_dict[l_ist[0]] = int(l_ist[1])
     print(calculate_handlen(a_dict))
-        
 if __name__ == "__main__":
     main()
