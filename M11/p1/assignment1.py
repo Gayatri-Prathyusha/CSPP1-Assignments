@@ -35,7 +35,7 @@ def get_word_score(word, n_ame):
     if n_ame == l_word:
         sum_0 = sum_0 * l_word
         return sum_0 + 50
-   
+
     return sum_0 * l_word
 def main():
     '''
