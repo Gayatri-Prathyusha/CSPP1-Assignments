@@ -17,7 +17,7 @@ def update_hand(hand, word):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int) 
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
     a_list = {}
