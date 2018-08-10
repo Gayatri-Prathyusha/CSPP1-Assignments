@@ -19,39 +19,37 @@ Fill in the code for is_valid_word in ps4a.py and be sure you've
 passed the appropriate tests in test_ps4a.py before pasting your
 function definition here.
 '''
-
-def is_valid_word(word, hand, word_list):
+def is_valid_word(word, hand, wordList):
+    if word not in wordList:
+        return False
+    else:
+        for i in word:
+            if i not in hand.keys():
+                return False
+    return True
     """
-    Returns True if word is in the word_list and is entirely
+    Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
 
-    Does not mutate hand or word_list.
+    Does not mutate hand or wordList.
    
     word: string
     hand: dictionary (string -> int)
-    word_list: list of lowercase strings
+    wordList: list of lowercase strings
     """
-    c = 0
-    l = len(word_list)
-
-    if word in word_list:
-        for _ in hand:
-            if _ in word:
-                c = c+1
-        if c == l:
-        return True
-    return False
-
+    # TO DO ... <-- Remove this comment when you code this function
 def main():
+    """string"""
     word = input()
-    n_num = int(input())
+    n = int(input())
     adict = {}
-    for _ in range(n_num):
+    for i in range(n):
         data = input()
-        l_ist = data.split()
-        adict[l_ist[0]] = int(l_ist[1])
-    l_2 = list(input().split())
-    print(is_valid_word(word,adict,l_2))
-        
+        i = i+1
+        i = i-1
+        l = data.split()
+        adict[l[0]] = int(l[1])
+    l2 = input().split()
+    print(is_valid_word(word,adict,l2))
 if __name__ == "__main__":
     main()
