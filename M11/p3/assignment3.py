@@ -26,7 +26,7 @@ def is_valid_word(word, hand, wordList):
         for i in word:
             if i not in hand.keys():
                 return False
-    return True
+        return True
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
