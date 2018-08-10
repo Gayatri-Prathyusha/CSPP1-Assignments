@@ -1,9 +1,8 @@
-"""#Exercise: Assignment-2
+""" #Exercise: Assignment-2
 #Implement the update_hand function. Make sure
 this function has no side effects: i.e., it must not
 mutate the hand passed in. Before pasting your function
 definition here, be sure you've passed the appropriate tests in test_ps4a.py."""
-
 
 def update_hand(hand, word):
     """
@@ -27,7 +26,6 @@ def update_hand(hand, word):
             a[j] = hand[j]-1
     return a
 
-
 def main():
     n_num = input()
     ad_ict = {}
@@ -36,9 +34,7 @@ def main():
         l_ist = data.split()
         ad_ict[l_ist[0]] = int(l_ist[1])
     data_1 = input()
-    print(update_hand(ad_ict,data_1))
-        
-
+    print(update_hand(ad_ict, data_1))
 
 if __name__ == "__main__":
     main()
