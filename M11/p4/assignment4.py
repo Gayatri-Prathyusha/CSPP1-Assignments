@@ -8,9 +8,8 @@ can be done in under five lines of code."""
 
 
 def calculate_handlen(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
     hand: dictionary (string int)
     returns: integer
     """
@@ -21,15 +20,13 @@ def calculate_handlen(hand):
 
 def main():
     """main function"""
-    n = input()
+    n_num = input()
     a_dict = {}
-    for _ in range(int(n)):
+    for _ in range(int(n_num)):
         data = input()
         l_ist = data.split()
         a_dict[l_ist[0]] = int(l_ist[1])
     print(calculate_handlen(a_dict))
         
-
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
