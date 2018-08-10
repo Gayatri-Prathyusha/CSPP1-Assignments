@@ -20,13 +20,14 @@ def update_hand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    a = {}
+    a_list = {}
     for j in word:
         if j in hand:
-            a[j] = hand[j]-1
-    return a
+            a_list[j] = hand[j]-1
+    return a_list
 
 def main():
+    """function main"""
     n_num = input()
     ad_ict = {}
     for _ in range(int(n_num)):
