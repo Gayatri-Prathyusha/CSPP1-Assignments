@@ -1,64 +1,64 @@
 '''
-    This is a continuation of the social network problem
+    This is a continuation of the social net_work problem
     There are 3 functions below that have to be completed
     Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
 
-def follow(network, arg1, arg2):
+def f_ollow(net_work, arg1, arg2):
     '''
         3 arguments are passed to this function
-        network is a dictionary representing the social network
-        arg1 and arg2 are two people in the network
+        net_work is a dictionary representing the social net_work
+        arg1 and arg2 are two people in the net_work
         follow function is called when arg1 wants to follows arg2
         so, this should result in adding arg2 to the followers list of arg1
-        update the network dictionary and return it
+        update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    return
 
-def unfollow(network, arg1, arg2):
+def un_follow(net_work, arg1, arg2):
     '''
         3 arguments are passed to this function
-        network is a dictionary representing the social network
-        arg1 and arg2 are two people in the network
-        unfollow function is called when arg1 wants to stop following arg2
+        net_work is a dictionary representing the social net_work
+        arg1 and arg2 are two people in the net_work
+        un_follow function is called when arg1 wants to stop following arg2
         so, this should result in removing arg2 from the followers list of arg1
-        update the network dictionary and return it
+        update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    return
 
-def delete_person(network, arg1):
+def delete_person(net_work, arg1):
     '''
         2 arguments are passed to this function
-        network is a dictionary representing the social network
-        arg1 is a person in the network
-        delete_person function is called when arg1 wants to exit from the network
-        so, this should result in deleting arg1 from network
+        net_work is a dictionary representing the social net_work
+        arg1 is a person in the net_work
+        delete_person function is called when arg1 wants to exit from the net_work
+        so, this should result in deleting arg1 from net_work
         also, before deleting arg1, remove arg1 from the everyone's followers list
-        update the network dictionary and return it
+        update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    return
 
 def main():
     '''
         handling testcase input and printing output
     '''
-    network = eval(input())
+    net_work = eval(input())
     lines = int(input())
-    for i in range(lines):
+    for i in enumerate(lines):
         i += 1
         line = input()
         output = line.split(" ")
         if output[0] == "follow":
-            network = follow(network, output[1], output[2])
-        elif output[0] == "unfollow":
-            network = unfollow(network, output[1], output[2])
+            net_work = f_ollow(net_work, output[1], output[2])
+        elif output[0] == "un_follow":
+            net_work = un_follow(net_work, output[1], output[2])
         elif output[0] == "delete":
-            network = delete_person(network, output[1])
+            net_work = delete_person(net_work, output[1])
 
-    print(network)
+    print(net_work)
 
 if __name__ == "__main__":
     main()
