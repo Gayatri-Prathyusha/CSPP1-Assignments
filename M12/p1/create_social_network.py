@@ -43,7 +43,6 @@ def create_social_network(data):
             for j in range(len(l_ist)):
                 d_ict[i[j]] = i[j].split(",")
         return d_ict
-    return d_ict
 def main():
     '''
         handling testcase input and printing output
