@@ -36,7 +36,7 @@ def create_social_network(data):
     s = list(data)
     l = s.split("\n")
     d = {}
-    if data == str(data)
+    if data is str
         for i in enumerate(l):
             i = i.split("follows")
             d[i[0]] = i[1].split(", ")
