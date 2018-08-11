@@ -42,8 +42,8 @@ def create_social_network(data):
         j=0
         for j in range(len(l)):
             if l[[j][0]] not in d:
-            l[[j][1]] = l[j][i].split(",")
-            d[l[j][0]] = d[l[j][1]]
+                l[[j][1]] = l[j][i].split(",")
+                d[l[j][0]] = d[l[j][1]]
         elif d[j][1] not in d[j][0]:
             d = d[l[j][0]].append[l[j][1]]
     return d
