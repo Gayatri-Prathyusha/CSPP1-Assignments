@@ -14,7 +14,7 @@ def f_ollow(net_work, arg1, arg2):
         update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    return
+    return arg1
 
 def un_follow(net_work, arg1, arg2):
     '''
@@ -26,7 +26,7 @@ def un_follow(net_work, arg1, arg2):
         update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    return
+    return arg2
 
 def delete_person(net_work, arg1):
     '''
@@ -39,7 +39,7 @@ def delete_person(net_work, arg1):
         update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    return
+    return arg1
 
 def main():
     '''
