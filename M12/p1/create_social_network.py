@@ -36,11 +36,11 @@ def create_social_network(data):
     s = list(data)
     l = str(s).split("\n")
     d = {}
-    if str in l:
-        for i in l:
-            for j in len(l):
-                i = i.split("follows")
-                d[i[j]] = i[j].split(", ")
+    
+    for i in l:
+        for j in len(l):
+            i = i.split("follows")
+            d[i[j]] = i[j].split(", ")
     return d
 
 def main():
