@@ -34,19 +34,14 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     s = list(data)
-    l = list(str(s).split("\n"))
+    l = str(s).split("\n")
     d = {}
     
     for i in l:
         i = i.split("follows")
         j=0
         for j in range(len(l)):
-            if l[[j][0]] not in d:
-                l[[j][1]] = l[j][1].split(",")
-                d[l[j][0]] = d[l[j][1]]
-        else:
-           if d[j][1] not in d[j][0]:
-            d = d[l[j][0]].append[l[j][1]]
+            d[i[j]] = i[j].split(",")
     return d
 
 def main():
