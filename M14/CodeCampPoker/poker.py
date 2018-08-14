@@ -30,7 +30,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    hand_temp = sorted(hand_sor, key = get_val)
+    hand_temp = sorted(hand, key = get_val)
     for i  in range (len(hand)-1):
         if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
             return False
