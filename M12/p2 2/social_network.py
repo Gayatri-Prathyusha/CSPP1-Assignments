@@ -39,7 +39,7 @@ def delete_person(net_work, arg1):
         update the net_work dictionary and return it
     '''
     # remove the pass below and start writing your code
-    return arg1
+    return arg1s
 
 def main():
     '''
