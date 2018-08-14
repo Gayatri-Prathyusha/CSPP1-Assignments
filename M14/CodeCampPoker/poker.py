@@ -8,6 +8,7 @@
          'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS',
          'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']"""
 def get_val(y_x):
+    """values for the strings in the deck """
     if y_x[0] == 'A':
         return 14
     elif y_x[0] == 'K':
@@ -30,7 +31,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    hand_temp = sorted(hand, key = get_val)
+    hand_temp = sorted(hand, key=get_val)
     #print(hand_temp)
 
 
@@ -106,7 +107,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key = hand_rank)
+    return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
