@@ -31,8 +31,12 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     hand_temp = sorted(hand, key = get_val)
-    for i  in range (len(hand)-1):
-        if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
+    #print(hand_temp)
+
+
+    for i  in range (len(hand_temp)-1):
+        #print(hand_temp [i][0] , hand_temp [i+1][0])
+        if get_val(hand_temp[i+1][0])-get_val(hand_temp[i][0]) != 1:
             return False
     return True
 
@@ -47,9 +51,9 @@ def is_flush(hand):
     '''
 
     for i  in range (len(hand)-1):
-        if hand[i][1] == hand[i+1][1]:      
-            return True
-        return False 
+        if hand[i][1] != hand[i+1][1]:      
+            return False
+    return True 
 
 def hand_rank(hand):
     '''
@@ -75,6 +79,7 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
+    #print (is_straight(hand))
     if is_straight(hand) and is_flush(hand):
         return 3
     if is_flush(hand):
