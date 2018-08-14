@@ -3,7 +3,22 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
+dec_k = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD'
+        'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'KH', 'JH', 'QH',
+        'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS',
+        'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']
+def get_val(x):
+    if x[0] == 'A':
+        return 14
+    elif x[0] == 'K':
+        return 13
+    elif x[0] == 'Q':
+        return 12
+    elif x[0] == 'J':
+        return 11
+    elif x[0] == 'T':
+        return 10
+    return int(x[0])
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,13 +29,12 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    i = 0
-    for each_element in hand:
-        if (int(hand[i][0])+1) == (int(hand[i+1][0])):
-            return True
-        else:
+    
+    hand_temp = sorted(hand, key=get_val)
+    for i  in range (len(hand)-1):
+        if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
             return False
-
+    return True
 
 def is_flush(hand):
     '''
