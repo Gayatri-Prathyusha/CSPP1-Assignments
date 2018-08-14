@@ -18,7 +18,7 @@ def is_straight(hand):
     for each_element in hand:
         if (hand[i][i])+1 == (hand[i+1][i+1]):
             return True
-        i = i + 1
+            i = i + 1
         else:
             return False
 
@@ -38,7 +38,7 @@ def is_flush(hand):
         if hand[i][i+1] == hand[i+1][i+2]:
         
             return True
-        i = i + 1        
+            i = i + 1        
         else:
             return False
 
