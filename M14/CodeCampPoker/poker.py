@@ -16,11 +16,12 @@ def is_straight(hand):
     '''
     i = 0
     for each_element in hand:
-        if (hand[i][0])+1 == (hand[i+1][0]):
+        if (hand[i][i])+1 == (hand[i+1][i+1]):
             return True
+        i = i + 1
         else:
             return False
-        i = i + 1
+
 
 def is_flush(hand):
     '''
@@ -34,12 +35,13 @@ def is_flush(hand):
     i = 0
     for each_element in hand:
 
-        if hand[i][i] == hand[i+1][i+1]:
+        if hand[i][i+1] == hand[i+1][i+2]:
         
             return True
+        i = i + 1        
         else:
             return False
-        i = i + 1
+
 
 def hand_rank(hand):
     '''
