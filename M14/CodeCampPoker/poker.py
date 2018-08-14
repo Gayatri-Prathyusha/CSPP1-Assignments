@@ -14,7 +14,12 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    pass
+        i = 0
+    for each_element in hand:
+        if int(hand[i][0])+1 == int(hand[i+1][0]):
+            return True
+        else:
+            return False
 
 def is_flush(hand):
     '''
@@ -25,7 +30,12 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    pass
+    i = 0
+    for each_element in hand:
+        if hand[i][i] == hand[i+1][i+1]:
+            return True
+        else:
+            return False
 
 def hand_rank(hand):
     '''
@@ -51,7 +61,14 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 1
+    if is_straight(hand) and is_flush(hand):
+        return 3
+    elif is_flush(hand):
+        return 2
+    elif is_straight(hand):
+        return 1
+    else:
+        return 0
 
 def poker(hands):
     '''
@@ -71,7 +88,7 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    return max(hands, key = hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
