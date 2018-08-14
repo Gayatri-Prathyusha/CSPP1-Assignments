@@ -32,10 +32,13 @@ def is_flush(hand):
     '''
     i = 0
     for each_element in hand:
+
         if hand[i][i] == hand[i+1][i+1]:
+            i = i + 1
             return True
         else:
             return False
+
 
 def hand_rank(hand):
     '''
