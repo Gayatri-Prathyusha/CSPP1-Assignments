@@ -50,8 +50,7 @@ def is_flush(hand):
    
         if hand[i][1] == hand[i+1][1]:      
             return True
-        else:
-            return False
+        return False
 
     i = i + 1 
 
