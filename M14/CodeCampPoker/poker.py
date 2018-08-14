@@ -19,6 +19,7 @@ def get_val(x):
     elif x[0] == 'T':
         return 10
     return int(x[0])
+#face_values = '--23456789TJQKA'
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -30,7 +31,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     
-    hand_temp = sorted(hand, key = get_val)
+    hand_temp = sorted(hand, key = get_val or key)
     for i  in range (len(hand)-1):
         if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
             return False
