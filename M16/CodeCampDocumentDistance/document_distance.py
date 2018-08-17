@@ -13,7 +13,7 @@ def clean_up(input_str):
     regex = re.compile('[^a-z ]')
     input_str = regex.sub('',input_str)
     list_of_words = input_str.split()
-    for i,j in enumerate(list_of_words):
+    for _,j in enumerate(list_of_words):
 
         j = j.strip()
         #list_of_words[each_word_index] = list_of_words[each_word_index].strip()
