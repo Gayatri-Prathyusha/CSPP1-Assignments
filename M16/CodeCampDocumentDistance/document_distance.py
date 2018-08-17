@@ -8,17 +8,22 @@ import re
 import math
 
 def clean_up(input_str):
+    """ removing the numbers special characters and some seperating symbols"""
     input_str = input_str.lower()
     regex = re.compile('[^a-z ]')
     input_str = regex.sub('',input_str)
     list_of_words = input_str.split()
-    for each_word_index in range(len(list_of_words)):
-        list_of_words[each_word_index] = list_of_words[each_word_index].strip()
+    for i,j in enumerate(list_of_words):
+
+        j = j.strip()
+        #list_of_words[each_word_index] = list_of_words[each_word_index].strip()
     return list_of_words
 
     #return [regex.sub('',each_word.strip())for each_word in input_string.lower().split('')]
 
 def remove_stop_words(list_of_words):
+    """removing the stopword a , an, and , the, etc some connectiong words 
+    and words in the stopwords text file"""
     stop_words = load_stopwords('stopwords.txt')
     for each_word in stop_words:
         while each_word in list_of_words:
@@ -26,6 +31,7 @@ def remove_stop_words(list_of_words):
     return list_of_words
 
 def dict_frequency(list_of_words, index, dict_ionary):
+    """ calculating the frequency of the words occurance in the dictionary """
     for each_word in list_of_words:
         if each_word != "" :
             if each_word not in dict_ionary:
@@ -34,6 +40,7 @@ def dict_frequency(list_of_words, index, dict_ionary):
     return dict_ionary
 
 def  computation_values(dict_ionary):
+    """ Calculating the cosine value and retuning the value """
     nume_rator = sum(value[0] * value[1] for value in dict_ionary.values())
     denominator_1 = math.sqrt(sum(value[0]**2 for value in dict_ionary.values()))
     denominator_2 = math.sqrt(sum(value[1]**2 for value in dict_ionary.values()))
