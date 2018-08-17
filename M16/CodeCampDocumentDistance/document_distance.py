@@ -2,15 +2,60 @@
     Document Distance - A detailed description is given in the PDF
 '''
 
-def similarity(dict1, dict2):
+
+
+import re
+import math
+
+def clean_up(input_str):
+    input_str = input_str.lower()
+    regex = re.compile('[^a-z ]')
+    input_str = regex.sub('',input_str)
+    list_of_words = input_str.split()
+    for each_word_index in range(len(list_of_words)):
+        list_of_words[each_word_index] = list_of_words[each_word_index].strip()
+    return list_of_words
+
+    #return [regex.sub('',each_word.strip())for each_word in input_string.lower().split('')]
+
+def remove_stop_words(list_of_words):
+    stop_words = load_stopwords('stopwords.txt')
+    for each_word in stop_words:
+        while each_word in list_of_words:
+            list_of_words.remove(each_word)
+    return list_of_words
+
+def dict_frequency(list_of_words, index, dict_ionary):
+    for each_word in list_of_words:
+        if each_word != "" and each_word not in dict_ionary:
+            dict_ionary[each_word] = [0,0]
+        dict_ionary[each_word][index] += 1
+    return dict_ionary
+
+def  computation_values(dict_ionary):
+    nume_rator = sum(value[0] * value[1] for value in dict_ionary.values())
+    denominator_1 = math.sqrt(sum(values[0]**2) for value in dict_ionary.values())
+    denominator_2 = math.sqrt(sum(values[1]**2) for value in dict_ionary.values())
+    return nume_rator/(denominator_1 * denominator_2)
+
+
+
+def similarity(dict_1, dict_2):
     '''
         Compute the document distance as given in the PDF
     '''
-    pass
+    input_1 = clean_up(dict_1)
+    input_2 = clean_up(dict_2)
+    input_1 = remove_stop_words(input_1)
+    input_2 = remove_stop_words(input_2)
+    d_ict = {}
+    d_ict = dict_frequency(input_1, 0, d_ict)
+    d_ict = dict_frequency(input_2, 1, d_ict)
+    return computation_values(d_ict)
 
 def load_stopwords(filename):
     '''
-        loads stop words from a file and returns a dictionary
+        loads stop words from a file and returns a dict_ionary
     '''
     stopwords = {}
     with open(filename, 'r') as filename:
@@ -22,10 +67,10 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
-    input1 = input()
-    input2 = input()
+    input_1 = input()
+    input_2 = input()
 
-    print(similarity(input1, input2))
+    print(similarity(input_1, input_2))
 
 if __name__ == '__main__':
     main()
