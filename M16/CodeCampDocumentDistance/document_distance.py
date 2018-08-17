@@ -11,9 +11,9 @@ def clean_up(input_str):
     """ removing the numbers special characters and some seperating symbols"""
     input_str = input_str.lower()
     regex = re.compile('[^a-z ]')
-    input_str = regex.sub('',input_str)
+    input_str = regex.sub('', input_str)
     list_of_words = input_str.split()
-    for _,j in enumerate(list_of_words):
+    for _, j in enumerate(list_of_words):
 
         j = j.strip()
         #list_of_words[each_word_index] = list_of_words[each_word_index].strip()
@@ -22,7 +22,7 @@ def clean_up(input_str):
     #return [regex.sub('',each_word.strip())for each_word in input_string.lower().split('')]
 
 def remove_stop_words(list_of_words):
-    """removing the stopword a , an, and , the, etc some connectiong words 
+    """removing the stopword a , an, and , the, etc some connectiong words
     and words in the stopwords text file"""
     stop_words = load_stopwords('stopwords.txt')
     for each_word in stop_words:
@@ -33,7 +33,7 @@ def remove_stop_words(list_of_words):
 def dict_frequency(list_of_words, index, dict_ionary):
     """ calculating the frequency of the words occurance in the dictionary """
     for each_word in list_of_words:
-        if each_word != "" :
+        if each_word != "":
             if each_word not in dict_ionary:
                 dict_ionary[each_word] = [0,0]
             dict_ionary[each_word][index] += 1
