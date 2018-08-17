@@ -3,10 +3,6 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-"""DEC_K = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD'
-         'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'KH', 'JH', 'QH',
-         'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS',
-         'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']"""
 def get_val(y_x):
     """values for the strings in the deck """
     if y_x[0] == 'A':
@@ -33,9 +29,7 @@ def is_straight(hand):
     '''
     hand_temp = sorted(hand, key=get_val)
     #print(hand_temp)
-
-
-    for i  in range (len(hand_temp)-1):
+    for i  in range(len(hand_temp)-1):
         #print(hand_temp [i][0] , hand_temp [i+1][0])
         if get_val(hand_temp[i+1][0])-get_val(hand_temp[i][0]) != 1:
             return False
@@ -50,9 +44,8 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-
-    for i  in range (len(hand)-1):
-        if hand[i][1] != hand[i+1][1]:      
+    for i in range(len(hand)-1):
+        if hand[i][1] != hand[i+1][1]:
             return False
     return True 
 
