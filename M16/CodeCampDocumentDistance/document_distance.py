@@ -27,9 +27,10 @@ def remove_stop_words(list_of_words):
 
 def dict_frequency(list_of_words, index, dict_ionary):
     for each_word in list_of_words:
-        if each_word != "" and each_word not in dict_ionary:
-            dict_ionary[each_word] = [0,0]
-        dict_ionary[each_word][index] += 1
+        if each_word != "" :
+            if each_word not in dict_ionary:
+                dict_ionary[each_word] = [0,0]
+            dict_ionary[each_word][index] += 1
     return dict_ionary
 
 def  computation_values(dict_ionary):
@@ -37,7 +38,6 @@ def  computation_values(dict_ionary):
     denominator_1 = math.sqrt(sum(values[0]**2) for value in dict_ionary.values())
     denominator_2 = math.sqrt(sum(values[1]**2) for value in dict_ionary.values())
     return nume_rator/(denominator_1 * denominator_2)
-
 
 
 def similarity(dict_1, dict_2):
