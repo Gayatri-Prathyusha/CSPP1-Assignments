@@ -60,13 +60,13 @@ def similarity(dict_1, dict_2):
     d_ict = dict_frequency(input_2, 1, d_ict)
     return computation_values(d_ict)
 
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dict_ionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     return stopwords
 
