@@ -35,7 +35,7 @@ def dict_frequency(list_of_words, index, dict_ionary):
     for each_word in list_of_words:
         if each_word != "":
             if each_word not in dict_ionary:
-                dict_ionary[each_word] = [0,0]
+                dict_ionary[each_word] = [0, 0]
             dict_ionary[each_word][index] += 1
     return dict_ionary
 
