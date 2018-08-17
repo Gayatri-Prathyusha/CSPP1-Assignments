@@ -13,11 +13,11 @@ def is_flush(hand):
     '''is flush function'''
     return len(set(s for c, s in hand)) == 1
 
-def kind_of(hand_rank, num_of_card):
+def kind_of(rank_inp, num_ofcard):
     '''writing kind of function'''
-    for r_ank in rank_in:
-        if rank_in.count(r_ank) == num_of_card:
-            return r_ank
+    for r_rank in rank_in:
+        if rank_in.count(r_rank) == num_ofcard:
+            return r_rank
     return False
 
 def hand_rank(hand):
