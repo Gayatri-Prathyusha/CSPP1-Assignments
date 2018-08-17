@@ -35,8 +35,8 @@ def dict_frequency(list_of_words, index, dict_ionary):
 
 def  computation_values(dict_ionary):
     nume_rator = sum(value[0] * value[1] for value in dict_ionary.values())
-    denominator_1 = math.sqrt(sum(values[0]**2) for value in dict_ionary.values())
-    denominator_2 = math.sqrt(sum(values[1]**2) for value in dict_ionary.values())
+    denominator_1 = math.sqrt(sum(values[0]**2 for value in dict_ionary.values()))
+    denominator_2 = math.sqrt(sum(values[1]**2 for value in dict_ionary.values()))
     return nume_rator/(denominator_1 * denominator_2)
 
 
