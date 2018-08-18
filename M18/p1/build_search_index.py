@@ -50,23 +50,13 @@ def word_list(input_text):
         j = j.strip()
     return list_of_words
 
-def remove_stop_words(list_of_words):
-    """removing the stopword a , an, and , the, etc some connectiong words
-    and words in the stopwords text file"""
-    stop_words = load_stopwords('stopwords.txt')
-    for each_word in stop_words:
-        while each_word in list_of_words:
-            list_of_words.remove(each_word)
-    return list_of_words
-
-
 def dict_frequency(list_of_words, index, d_ict):
     """ calculating the frequency of the words occurance in the dictionary """
     for each_word in list_of_words:
         if each_word != "":
             if each_word not in d_ict:
                 d_ict[each_word] = [0, 0]
-            d_ict[each_word][index] += sentance_number
+            d_ict[each_word][index] += line
 
 
 
@@ -96,9 +86,8 @@ def build_search_index(docs):
         filtered_sentence = []
         for w in word_tokens:
             if w not in docs:
-                
                 filtered_sentence.append(w)
-    return filtered_sentence
+        return filtered_sentence
 
 # helper function to print the search index
 # use this to verify how the search index looks
