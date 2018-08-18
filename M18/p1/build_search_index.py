@@ -59,7 +59,7 @@ def remove_stop_words(list_of_words):
             list_of_words.remove(each_word)
     return list_of_words
 
-    
+
 def dict_frequency(list_of_words, index, d_ict):
     """ calculating the frequency of the words occurance in the dictionary """
     for each_word in list_of_words:
@@ -90,14 +90,16 @@ def build_search_index(docs):
 
     # return search index
 
-    docs = set(docs.words('english')) 
-    word_tokens = word_tokenize(example_sent)
-    filtered_sentence = [w for w in word_tokens if not w in stop_words]
-    filtered_sentence = []
-    for w in word_tokens:
-        if w not in docs:
+        docs = set(docs.words('english')) 
+        word_tokens = word_tokenize(example_sent)
+        filtered_sentence = [w for w in word_tokens if not w in stop_words]
+        filtered_sentence = []
+        for w in word_tokens:
+            if w not in docs:
+                
             filtered_sentence.append(w)
-
+    return filtered_sentence
+    
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
