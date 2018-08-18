@@ -50,13 +50,26 @@ def word_list(input_text):
         j = j.strip()
     return list_of_words
 
+def remove_stop_words(list_of_words):
+    """removing the stopword a , an, and , the, etc some connectiong words
+    and words in the stopwords text file"""
+    stop_words = load_stopwords('stopwords.txt')
+    for each_word in stop_words:
+        while each_word in list_of_words:
+            list_of_words.remove(each_word)
+    return list_of_words
+
+    
 def dict_frequency(list_of_words, index, d_ict):
     """ calculating the frequency of the words occurance in the dictionary """
     for each_word in list_of_words:
         if each_word != "":
             if each_word not in d_ict:
                 d_ict[each_word] = [0, 0]
-            d_ict[each_word][index] += 1
+            d_ict[each_word][index] += sentance_number
+
+
+
     return d_ict
 
 def build_search_index(docs):
@@ -69,7 +82,6 @@ def build_search_index(docs):
     # iterate through all the docs
     for i,j in enumerate(docs):
         
-        doc_id = d_ict.keys()
     # keep track of doc_id which is the list index corresponding the document
     
     # hint: use enumerate to obtain the list index in the for loop
@@ -78,18 +90,13 @@ def build_search_index(docs):
 
     # return search index
 
-    docs = set(docs.words('english'))
- 
+    docs = set(docs.words('english')) 
     word_tokens = word_tokenize(example_sent)
- 
     filtered_sentence = [w for w in word_tokens if not w in stop_words]
- 
     filtered_sentence = []
     for w in word_tokens:
         if w not in docs:
             filtered_sentence.append(w)
- 
-    return word_sequence
 
 # helper function to print the search index
 # use this to verify how the search index looks
