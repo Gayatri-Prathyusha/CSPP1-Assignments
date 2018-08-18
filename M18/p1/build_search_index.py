@@ -97,9 +97,9 @@ def build_search_index(docs):
         for w in word_tokens:
             if w not in docs:
                 
-            filtered_sentence.append(w)
+                filtered_sentence.append(w)
     return filtered_sentence
-    
+
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
