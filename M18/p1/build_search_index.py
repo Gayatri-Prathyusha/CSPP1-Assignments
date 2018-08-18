@@ -22,8 +22,6 @@
 '''
 
 import re
-
-from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 # helper function to load the stop words from a file
