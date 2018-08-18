@@ -21,6 +21,11 @@
     }
 '''
 
+import re
+import ntlk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -32,14 +37,29 @@ def load_stopwords(filename):
             stopwords[line.strip()] = 0
     return stopwords
 
-
-def word_list(text):
+def word_list(input_text):
     '''
         Change case to lower and split the words using a SPACE
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+    input_text = input_text.lower()
+    regex = re.compile('[^a-z ]')
+    input_text = regex.sub('', input_text)
+    list_of_words = input_text.split(' ')
+    for _, j in enumerate(list_of_words):
+
+        j = j.strip()
+    return list_of_words
+
+def dict_frequency(list_of_words, index, d_ict):
+    """ calculating the frequency of the words occurance in the dictionary """
+    for each_word in list_of_words:
+        if each_word != "":
+            if each_word not in d_ict:
+                d_ict[each_word] = [0, 0]
+            d_ict[each_word][index] += 1
+    return d_ict
 
 def build_search_index(docs):
     '''
@@ -47,17 +67,31 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-
+    d_ict = {}
     # iterate through all the docs
+    for i,j in enumerate(docs):
+        
+        doc_id = d_ict.keys()
     # keep track of doc_id which is the list index corresponding the document
+    
     # hint: use enumerate to obtain the list index in the for loop
 
-        # clean up doc and tokenize to words list
-
-        # add or update the words of the doc to the search index
+    # add or update the words of the doc to the search index
 
     # return search index
-    pass
+
+    docs = set(docs.words('english'))
+ 
+    word_tokens = word_tokenize(example_sent)
+ 
+    filtered_sentence = [w for w in word_tokens if not w in stop_words]
+ 
+    filtered_sentence = []
+    for w in word_tokens:
+        if w not in docs:
+            filtered_sentence.append(w)
+ 
+    return word_sequence
 
 # helper function to print the search index
 # use this to verify how the search index looks
