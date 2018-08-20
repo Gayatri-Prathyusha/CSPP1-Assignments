@@ -46,7 +46,6 @@ def search(search_index, query):
 
 
     return set(list_new)
- 
 
 def process_queries(search_index, queries):
     '''
@@ -66,7 +65,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
- 
     # read the search queries into a list
     queries = []
     for i in range(lines):
