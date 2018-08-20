@@ -42,7 +42,7 @@ def search(search_index, query):
 
     for each_query in search_index:
         list_new += [search_index[each_query]]
-    return set[list_new]
+    return set{list_new}
     
 
 
