@@ -53,8 +53,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    for each_query in queries:
-        print(search(search_index, each_query))
+    for each_word in queries:
+        print(search(search_index, each_word))
 
 def main():
     '''
