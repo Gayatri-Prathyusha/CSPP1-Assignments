@@ -42,7 +42,7 @@ def search(search_index, query):
     for each_query in query:
         if each_query in search_index:
             for i, _ in enumerate(search_index[each_query]):
-                list_new.append(_)
+                list_new.append(i)
 
 
     return set(list_new)
