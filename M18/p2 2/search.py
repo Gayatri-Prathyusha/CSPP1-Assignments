@@ -38,10 +38,11 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query = query.lower().split(" ")
-    list_new = ()
+    list_new = ([])
     if each_query in search_index:
         for each_query in search_index:
-            list_new += list_new.append(search_index[each_query])
+            list_new += [search_index[each_query]]
+
     return set(list_new)
     
 
