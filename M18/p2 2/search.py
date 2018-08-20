@@ -38,7 +38,7 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query_id = set()
-    query_list = query.split(" ")
+    
     for each_word in search_index:
         for each_element in query_list:
             if each_element == each_word:
