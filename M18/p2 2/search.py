@@ -67,7 +67,7 @@ def main():
     lines = int(input())
     # read the search queries into a list
     queries = []
-    for i in range(lines):
+    for _ in range(lines):
         queries.append(input())
 
     # call process queries
