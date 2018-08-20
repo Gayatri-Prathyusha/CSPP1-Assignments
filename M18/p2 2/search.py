@@ -40,8 +40,8 @@ def search(search_index, query):
     query = query.lower().split(" ")
     list_new = []
 
-    for each_query  in search_index:
-        list_new = append(values.search_index[])
+    for each_query  in query:
+        list_new = append(values.search_index(each_query))
     return set(list_new)
     
 
