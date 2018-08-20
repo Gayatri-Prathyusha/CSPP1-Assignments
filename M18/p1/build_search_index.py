@@ -116,8 +116,6 @@ def main():
     #print(documents)
     # call print to display the search index
     print_search_index(build_search_index(documents))
-    #print(build_search_index(documents))
-
+    
 if __name__ == '__main__':
     main()
-#print(remove_stopwords(word_list("Computers makes as many mistakes in one second as three men working for thirty years straight.")))
