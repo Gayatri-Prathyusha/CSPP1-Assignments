@@ -38,8 +38,8 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     list_new = []
-    query = query.lower()
-    for query  in search_index:
+    query = queries.lower()
+    for queries  in search_index:
         list_new = append(values.search_index)
     return set(list_new)
     
