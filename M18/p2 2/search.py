@@ -41,7 +41,7 @@ def search(search_index, query):
     list_new = []
     for each_query in query:
         if each_query in search_index:
-            for _, j in search_index[each_query]:
+            for i, _ in enumerate(search_index[each_query]):
                 list_new.append(_)
 
 
