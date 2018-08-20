@@ -41,7 +41,7 @@ def search(search_index, query):
     list_new = []
 
     for each_query  in search_index:
-        list_new = list_new.append(search_index(each_query))
+        list_new = list_new.append(search_index[each_query])
     return set(list_new)
     
 
