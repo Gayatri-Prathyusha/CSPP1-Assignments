@@ -39,9 +39,9 @@ def search(search_index, query):
     '''
     query = query.lower().split(" ")
     list_new = ([])
-    if each_query in search_index:
-        for each_query in search_index:
-            list_new += [search_index[each_query]]
+    if each_word in search_index:
+        for each_word in search_index:
+            list_new += [search_index[each_word]]
 
     return set(list_new)
     
