@@ -36,7 +36,7 @@ def is_straight(hand):
     return True
 
 def is_flush(hand):
-    ''' 
+    '''
         How do we find out if the given hand is a flush?
         The hand has a list of cards represented as strings.
         Do we need both the characters in the string? No.
@@ -47,7 +47,7 @@ def is_flush(hand):
     for i in range(len(hand)-1):
         if hand[i][1] != hand[i+1][1]:
             return False
-    return True 
+    return True
 
 def hand_rank(hand):
     '''
